@@ -1,6 +1,6 @@
 -keep class com.d.lib.commenplayer.** {*;}
 
--keep class tv.danmaku.ijk.media.** {*;}
+-keep class org.videolan.libvlc.** {*;}
 
 -dontwarn com.nineoldandroids.**
 -keep class com.nineoldandroids.** {*;}

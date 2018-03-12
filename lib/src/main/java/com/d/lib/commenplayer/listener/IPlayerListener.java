@@ -1,6 +1,6 @@
 package com.d.lib.commenplayer.listener;
 
-import tv.danmaku.ijk.media.player.IMediaPlayer;
+import org.videolan.libvlc.MediaPlayer;
 
 /**
  * IPlayerListener
@@ -14,13 +14,13 @@ public interface IPlayerListener {
      * Register a callback to be invoked when the end of a media file
      * has been reached during playback.
      */
-    void onCompletion(IMediaPlayer mp);
+    void onCompletion(MediaPlayer mp);
 
     /**
      * Register a callback to be invoked when the media file
      * is loaded and ready to go.
      */
-    void onPrepared(IMediaPlayer mp);
+    void onPrepared(MediaPlayer mp);
 
     /**
      * Register a callback to be invoked when an error occurs
@@ -28,13 +28,13 @@ public interface IPlayerListener {
      * or if the listener returned false, VideoView will inform
      * the user of any errors.
      */
-    boolean onError(IMediaPlayer mp, int what, int extra);
+    boolean onError(MediaPlayer mp, int what, int extra);
 
     /**
      * Register a callback to be invoked when an informational event
      * occurs during playback or setup.
      */
-    boolean onInfo(IMediaPlayer mp, int what, int extra);
+    boolean onInfo(MediaPlayer mp, int what, int extra);
 
-    void onVideoSizeChanged(IMediaPlayer mp, int width, int height, int sarNum, int sarDen);
+    void onVideoSizeChanged(MediaPlayer mp, int width, int height, int sarNum, int sarDen);
 }
